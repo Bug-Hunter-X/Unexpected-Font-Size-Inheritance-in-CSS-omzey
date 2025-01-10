@@ -1,0 +1,12 @@
+The following CSS code snippet demonstrates an issue where the expected behavior does not occur due to unexpected inheritance of properties, specifically the `font-size` property.  The `p` element within the `.container` class unexpectedly inherits a larger font size from the parent. 
+
+```css
+.container {
+  font-size: 2em; /*This is the unexpected source of font-size inheritance*/
+}
+
+.container p {
+  font-size: 1em; /*This should override but doesn't*/
+  color: blue;
+}
+```
