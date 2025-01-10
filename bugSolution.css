@@ -1,0 +1,18 @@
+The solution involves explicitly setting the `font-size` property for the `.container p` element using the `font` property or by using more specific selectors to avoid unintentional inheritance. Here's a corrected version:
+
+```css
+.container {
+  font-size: 2em;
+}
+
+.container p {
+  font: 1em/1.5 Arial, sans-serif;/*Resetting font size using the font property*/
+  color: blue;
+}
+
+/*Alternative Solution: Using more specific selector if the above solution is not suitable*/
+.container > p{
+  font-size: 1em;
+  color: blue;
+}
+```
